@@ -19,6 +19,8 @@ def central_difference(f,x,h):
     approx = (f(x+h)-f(x))/h
     return approx
 
+
+
 def func_a(x):
     return x**3
 

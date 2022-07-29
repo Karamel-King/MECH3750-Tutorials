@@ -39,12 +39,12 @@ def theta_array(x,h,P,k,A, T_a, T_4, T_0):
     
     b = np.array([Theta_0, 0, 0, 0,Theta_L])
     
-    M = np.diag([1,sig,sig,sig,1],0)+np.diag([0,1,1,1],-1)+np.diag([1,1,1,0],1)
+    M = np.diag([1,sig,sig,sig,1],0)+np.diag([1,1,1,0],-1)+np.diag([0,1,1,1],1)
     
     theta_array = np.linalg.solve(M,b)
     
-    print(theta_array), print(sig), print(M)
+    print(theta_array)
     
-    return theta_array, sig, M
+    return theta_array
 
-name = theta_array(0.0002,h,P,k,A, T_a, T_4, T_0)
+theta_array(0.0002,h,P,k,A, T_a, T_4, T_0)

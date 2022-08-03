@@ -30,10 +30,6 @@ def ana_sol(T_a, T_L, T_0, h, P, k, A, L, x):
     
     return numer/domin
 
-def eg (lol):
-    return lol*2
-
-
 def theta_array(x,h,P,k,A, T_a, T_4, T_0):
     
     sig = -2 - lumpedsq(h,P,k,A)*x**2

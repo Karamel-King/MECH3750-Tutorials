@@ -4,6 +4,8 @@ Created on Wed Aug  3 13:06:36 2022
 
 @author: samee
 """
+import numpy as np
+import matplotlib.pyplot as plt
 
 def factorial(n):
     #return n!
@@ -33,7 +35,7 @@ def better_exp(n,x):
     #       + x**2  =1/fact(2*1) * x*x
     
     #               =1/fact(term) * x**term
-    term = 1 
+    term = np.ones_like(x) 
     output = term
     for i in range(1,n+1):
         term *= x / i
@@ -41,6 +43,14 @@ def better_exp(n,x):
     
     return output
 
+x = np.arange(-2,1,0.1)
+y1 = np.exp(x)
+
+fig, ax = plt.subplots()
+ax.plot(x,y1)
+for j in range(1, 10):
+    y2 = better_exp(j,x)
+    ax.plot(x,y2)
 
 
 

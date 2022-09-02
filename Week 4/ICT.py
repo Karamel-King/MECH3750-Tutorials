@@ -22,7 +22,7 @@ a = np.linalg.inv(P.T @ P) @ P.T @ f
 smooth_x = np.linspace(0,3)
 fitted_trend = a[0] + a[1] * smooth_x + a[2] * smooth_x**2
 
-fig, ax = plt.sub()
+fig, ax = plt.subplots()
 ax.scatter(x,f)
 ax.plot(smooth_x,fitted_trend,'r')
 
